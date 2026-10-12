@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>UI 自动化测试 Demo</title>
+</head>
+<body>
+    <h1>Hello Playwright</h1>
+    <p>这是一个本地测试页面，用于演示 UI 自动化。</p>
+    <button id="click-me">点我</button>
+    <p id="result"></p>
+    <script>
+        document.getElementById("click-me").addEventListener("click", function () {
+            document.getElementById("result").textContent = "按钮已被点击";
+        });
+    </script>
+</body>
+</html>
