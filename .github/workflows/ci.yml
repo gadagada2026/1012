@@ -26,4 +26,5 @@ jobs:
         run: uv run playwright install --with-deps chromium
 
       - name: Run tests
-        run: uv run pytest
+        # 内网测试（依赖 192.168.110.52）不在 CI 运行，仅跑本地 demo 测试
+        run: uv run pytest --ignore=tests/ui/test_hdf_login.py --ignore=tests/ui/test_contract_add.py
